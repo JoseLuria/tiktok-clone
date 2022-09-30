@@ -1,0 +1,46 @@
+@use "../utils";
+
+.video-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: utils.color-opacity(0.6, utils.$black);
+  display: flex;
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    font-size: utils.rem(14);
+    color: utils.$black;
+    margin-top: auto;
+    width: 100%;
+    padding: utils.rem(24);
+    background-color: utils.$white;
+    border-radius: utils.rem(10) utils.rem(10) 0 0;
+
+    .modal-button {
+      margin-left: auto;
+    }
+
+    .modal-title {
+      font-size: utils.rem(22);
+      font-weight: 500;
+    }
+
+    .modal-tags {
+      margin: utils.rem(14) 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: utils.rem(8);
+
+      .tag-element {
+        padding: utils.rem(2) utils.rem(6);
+        background-color: utils.$gray;
+        border-radius: utils.rem(4);
+        font-weight: 500;
+      }
+    }
+  }
+}

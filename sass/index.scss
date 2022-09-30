@@ -1,0 +1,60 @@
+@forward "./components";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: 10px;
+  scrollbar-color: #202124 transparent;
+}
+
+body {
+  background-color: #121316;
+  color: #eceff4;
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #202124;
+  border-radius: 6px;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+hr {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+button:focus-visible,
+a,
+a:focus-visible,
+input,
+input:focus-visible {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}

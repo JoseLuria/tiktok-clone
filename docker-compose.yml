@@ -1,0 +1,8 @@
+services:
+  tyerradb:
+    image: mongo:5.0.0
+    container_name: tyerra-database
+    ports:
+      - 27017:27017
+    volumes:
+      - ./database:/data/db

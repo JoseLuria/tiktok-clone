@@ -1,0 +1,14 @@
+@use "../utils";
+
+.red-icon {
+  stroke: #fe2c55;
+  fill: #fe2c55;
+}
+
+.icon-transition {
+  transition-duration: 200ms;
+}
+
+.empty-icon {
+  stroke: utils.color-opacity(0.6, utils.$white);
+}

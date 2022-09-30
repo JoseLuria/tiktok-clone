@@ -1,0 +1,30 @@
+@use "../utils";
+
+.navbar {
+  width: 100%;
+  height: utils.rem(91);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: utils.$black;
+  z-index: 1;
+  border-top: utils.color-opacity(0.1, utils.$white) solid utils.rem(1);
+
+  @include utils.breakpoint(utils.$size-md) {
+    width: utils.rem(120);
+    height: 100%;
+    border-top: none;
+    border-right: utils.color-opacity(0.1, utils.$white) solid utils.rem(1);
+  }
+
+  &-links {
+    margin: auto;
+    display: flex;
+    gap: utils.rem(32);
+
+    @include utils.breakpoint(utils.$size-md) {
+      flex-direction: column;
+    }
+  }
+}

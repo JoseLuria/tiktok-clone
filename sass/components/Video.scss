@@ -1,0 +1,70 @@
+@use "../utils";
+
+.video {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+
+  @include utils.breakpoint(utils.$size-md) {
+    padding: utils.rem(24);
+  }
+
+  &-player {
+    margin: auto;
+    position: relative;
+    aspect-ratio: 9/16;
+    height: 100%;
+    background-color: utils.color-opacity(0.1, utils.$white);
+    overflow: hidden;
+
+    @include utils.breakpoint(utils.$size-sm) {
+      max-height: utils.rem(750);
+    }
+
+    @include utils.breakpoint(utils.$size-md) {
+      border-radius: utils.rem(10);
+    }
+
+    .video-media {
+      height: 100%;
+    }
+
+    .video-elements {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: utils.rem(24) utils.rem(24) utils.rem(48);
+
+      .video-buttons {
+        margin-left: auto;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: utils.rem(16);
+      }
+
+      .video-info {
+        pointer-events: none;
+
+        .video-title {
+          font-size: utils.rem(24);
+          font-weight: 500;
+        }
+
+        .video-tags {
+          margin-top: utils.rem(10);
+          display: flex;
+          flex-wrap: wrap;
+          gap: utils.rem(8);
+        }
+      }
+    }
+  }
+}

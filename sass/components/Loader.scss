@@ -1,0 +1,36 @@
+@use "../utils";
+
+.loader {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: utils.rem(300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &-load {
+    width: utils.rem(100);
+    height: utils.rem(100);
+    border-radius: 50%;
+    border: utils.color-opacity(0.3, utils.$gray) solid utils.rem(8);
+    border-bottom: utils.color-opacity(0.4, utils.$gray) solid utils.rem(8);
+    animation: spin 1s linear infinite;
+  }
+
+  &-text {
+    text-align: center;
+    margin-top: utils.rem(20);
+    color: utils.color-opacity(0.6, utils.$white);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

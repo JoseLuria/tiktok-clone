@@ -1,0 +1,10 @@
+@use "../utils";
+
+.empty-favorites {
+  width: 100%;
+  max-width: utils.rem(250);
+  margin: utils.rem(60) auto 0;
+  text-align: center;
+
+  color: utils.color-opacity(0.6, utils.$white);
+}
