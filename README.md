@@ -1,6 +1,6 @@
 # 🤖 TikTok Clone
 
-Un clon de tiktok con la funcionalidad básica del scroll infinito y agregar video a favoritos.
+Un clon de tiktok con la funcionalidad básica del scroll infinito y agregar video a favoritos usando Redux.
 
 ## 🖼️ Screenshots
 
